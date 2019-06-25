@@ -1,0 +1,11 @@
+.progressContainer:hover {
+    cursor: pointer;
+}
+
+.progress {
+    align-self: flex-start;
+    background: #111111;
+    height: 6px;
+    transition: width .1s linear;
+    width: 0px;
+}

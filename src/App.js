@@ -1,25 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import MusicPlayer from './app/MusicPlayer';
+import { music } from './app/mock';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <MusicPlayer playlist={music}
+                    //  backgroundColor="#f00"
+                    //  activeTrackColor="#0f0"
+                    //  activeButtonColor="#ff0"
+                    //  inactiveButtonColor="#dff"
+                    //  buttonTextColor="#fdd"
+                    //  progressBarColor="#d54"
+                    //  textColor="#fff"
+        />
   );
 }
 

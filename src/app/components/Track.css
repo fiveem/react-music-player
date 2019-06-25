@@ -1,0 +1,27 @@
+.track {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.track img {
+    height: 40px;
+    width: 40px;
+}
+
+.track p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.track .trackInfo {
+    align-self: center;
+}
+
+.track.active {
+    background: #f0f0f0;
+} 
+
+.track:hover {
+    cursor: pointer;
+}

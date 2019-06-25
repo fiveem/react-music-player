@@ -1,0 +1,36 @@
+.controlsContainer {
+    box-sizing: border-box;
+    align-self: center;
+}
+
+.roundButton {
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 50%;
+    text-align: center;
+    box-sizing: border-box;
+    margin-left: 10px;
+    outline: none;
+    cursor: pointer;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+.roundButton:first-child {
+    margin-left: 0;
+}
+
+.roundButton i {
+    font-size: 15px;
+}
+
+.roundButton.active,
+.roundButton:hover {
+    background: #d0d0d0;
+}
+
+.roundButton.inactive {
+    background: #8a8a8a;
+    cursor: default;
+}
