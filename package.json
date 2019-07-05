@@ -1,7 +1,7 @@
 {
   "name": "@fiveem/react-music-player",
   "description": "React Music Player",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "scripts": {
     "build": "webpack --mode production"
   },
