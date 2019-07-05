@@ -6,6 +6,9 @@ import Track from './components/Track';
 import Progress from './components/Progress';
 import convertSeconds from './utils';
 
+import './index.css';
+import 'font-awesome/css/font-awesome.min.css';
+
 export default class MusicPlayer extends React.Component {
     constructor(props) {
         super(props);
@@ -158,7 +161,6 @@ export default class MusicPlayer extends React.Component {
             showPlaylist: !state.showPlaylist
         }))
     }
-
 
     onToggleShowMuteVolume() {
         this.setState((state) => ({
