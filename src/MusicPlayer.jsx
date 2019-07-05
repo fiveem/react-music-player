@@ -1,5 +1,4 @@
 import React from 'react';
-import './MusicPlayer.css';
 import Audio from './components/Audio';
 import Controls from './components/Controls';
 import Track from './components/Track';
@@ -7,7 +6,7 @@ import Progress from './components/Progress';
 import convertSeconds from './utils';
 
 import './index.css';
-import 'font-awesome/css/font-awesome.min.css';
+import style from './MusicPlayer.css';
 
 export default class MusicPlayer extends React.Component {
     constructor(props) {
@@ -196,10 +195,10 @@ export default class MusicPlayer extends React.Component {
         const { backgroundColor, activeButtonColor, inactiveButtonColor, buttonTextColor, textColor } = this.props;
 
         return (
-            <div className="container" style={{backgroundColor: backgroundColor || '', color: textColor || ''}}>
-                <div className="topContainer">
+            <div className={style.container} style={{backgroundColor: backgroundColor || '', color: textColor || ''}}>
+                <div className={style.topContainer}>
                     <img src={audio.image} alt={audio.name}/>
-                    <div className="trackInfo">
+                    <div className={style.trackInfo}>
                         <p>{audio.name}</p>
                         <p><small>{audio.author}</small></p>
                     </div>
@@ -222,7 +221,7 @@ export default class MusicPlayer extends React.Component {
                 {this.renderProgress()}
 
                 {playlistLength > 1 && showPlaylist?
-                    <div className="list">
+                    <div className={style.list}>
                         {this.renderList()}
                     </div>
                     :
@@ -237,9 +236,9 @@ export default class MusicPlayer extends React.Component {
         const { activeButtonColor, buttonTextColor } = this.props;
 
         return (
-            <div className="bottomContainer">
+            <div className={style.bottomContainer}>
                 <small>{timePlayed}</small>
-                <div className="volumeControl">
+                <div className={style.volumeControl}>
                     <button onClick={this.onToggleShowMuteVolume}>
                         {this.state.showMuteVolume ?
                             <i className="fa fa-volume-off"></i>
@@ -251,7 +250,7 @@ export default class MusicPlayer extends React.Component {
                 </div>
 
                 {playlistLength > 1 ?
-                        <button className="controlButton" onClick={this.onToggleShowPlaylist} style={{ backgroundColor: activeButtonColor, color: buttonTextColor }}>
+                        <button className={style.controlButton} onClick={this.onToggleShowPlaylist} style={{ backgroundColor: activeButtonColor, color: buttonTextColor }}>
                         {showPlaylist ?
                             <i className="fa fa-caret-up" />
                             :

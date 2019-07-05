@@ -1,12 +1,12 @@
 import React from 'react';
-import './Progress.css';
+import style from './Progress.css';
 
 const Progress = (props) => {
     const { progressContainerRef, progressRef } = props;
 
     return (
-        <div className="progressContainer" ref={progressContainerRef}>
-            <div className="progress" ref={progressRef} />
+        <div className={style.progressContainer} ref={progressContainerRef}>
+            <div className={style.progress} ref={progressRef} />
         </div>
     )
 }
