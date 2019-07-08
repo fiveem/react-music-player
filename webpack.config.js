@@ -29,7 +29,15 @@ module.exports = {
                     },
                     'sass-loader'
                 ]
-            }
+            }, {
+                test: /\.(png|jpe?g|gif|mp3|woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [
+                  {
+                    loader: 'file-loader',
+                    options: {},
+                  },
+                ],
+              }
         ]
     },
     resolve: {
