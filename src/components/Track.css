@@ -4,9 +4,11 @@
     border-top: 1px solid #ccc;
 }
 
-.track img {
+.trackImage {
     height: 40px;
-    width: 40px;
+    width: 80px;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .track p {

@@ -1,7 +1,7 @@
 .container {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    max-width: 100%;
     margin: 10px;
     border-radius: 8px;
     border: 1px solid #cccccc;
@@ -14,9 +14,11 @@
     padding: 10px;
 }
 
-.topContainer img {
+.topContainerImage {
     height: 60px;
-    width: 60px;
+    width: 90px;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .trackInfo {

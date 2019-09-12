@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import Audio from './components/Audio';
 import Controls from './components/Controls';
 import Track from './components/Track';
@@ -117,10 +119,12 @@ export default class MusicPlayer extends React.Component {
 
     onPlayClicked() {
         this.audioRef && this.audioRef.play();
+        this.props.playClicked && this.props.playClicked(this.state.activeTrack);
     }
 
     onPauseClicked() {
         this.audioRef && this.audioRef.pause();
+        this.props.pauseClicked && this.props.pauseClicked(this.state.activeTrack);
     }
 
     onPreviousClicked() {
@@ -132,6 +136,7 @@ export default class MusicPlayer extends React.Component {
             }),
             () => this.audioRef && this.audioRef.play()
         );
+        this.props.previousClicked && this.props.previousClicked();
     }
 
     onNextClicked() {
@@ -142,6 +147,7 @@ export default class MusicPlayer extends React.Component {
             }),
             () => this.audioRef && this.audioRef.play()
         );
+        this.props.nextClicked && this.props.nextClicked();
     }
 
     onTrackClicked(index) {
@@ -197,7 +203,7 @@ export default class MusicPlayer extends React.Component {
         return (
             <div className={style.container} style={{backgroundColor: backgroundColor || '', color: textColor || ''}}>
                 <div className={style.topContainer}>
-                    <img src={audio.image} alt={audio.name}/>
+                    <div className={style.topContainerImage} style={{ backgroundImage: `url(${audio.image})`}} />
                     <div className={style.trackInfo}>
                         <p>{audio.name}</p>
                         <p><small>{audio.author}</small></p>
@@ -293,4 +299,19 @@ export default class MusicPlayer extends React.Component {
             <Progress progressContainerRef={ref => this.volumeContainerRef = ref} progressRef={ref => this.volumeRef = ref} />
         )
     }
+}
+
+MusicPlayer.propTypes = {
+    playlist: PropTypes.array.isRequired,
+    playClicked: PropTypes.func,
+    pauseClicked: PropTypes.func,
+    previousClicked: PropTypes.func,
+    nextClicked: PropTypes.func,
+    backgroundColor: PropTypes.string,
+    activeButtonColor: PropTypes.string,
+    inactiveButtonColor: PropTypes.string,
+    buttonTextColor: PropTypes.string,
+    textColor: PropTypes.string,
+    activeTrackColor: PropTypes.string,
+    progressBarColor: PropTypes.string
 }
