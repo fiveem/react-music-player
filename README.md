@@ -42,12 +42,12 @@ import MusicPlayer from '@fiveem/react-music-player'
 |pauseClicked|Function||Function that is called when the pause button is clicked|
 |previousClicked|Function||Function that is called when the previous button is clicked|
 |nextClicked|Function||Function that is called when the next button is clicked|
-|backgroundColor|String|'#fcfcfc'|Background color of the music player|
-|inactiveButtonColor|String|'#8a8a8a'|Color of the inactive buttons (the inactive button are the next and previous buttons)|
-|buttonTextColor|String|'#000'|Color of the text/icon that is displayed on the buttons|
-|textColor|String|'#000'|Color of the music player text|
-|activeTrackColor|String|'#f0f0f0'|Highlight color of the active track|
-|progressBarColor|String|'#111111'|Color of the progress bar|
+|backgroundColor|String|`#fcfcfc`|Background color of the music player|
+|inactiveButtonColor|String|`#8a8a8a`|Color of the inactive buttons (the inactive button are the next and previous buttons)|
+|buttonTextColor|String|`#000`|Color of the text/icon that is displayed on the buttons|
+|textColor|String|`#000`|Color of the music player text|
+|activeTrackColor|String|`#f0f0f0`|Highlight color of the active track|
+|progressBarColor|String|`#111111`|Color of the progress bar|
 
 ### JSON
 
